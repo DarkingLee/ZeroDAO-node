@@ -3,12 +3,12 @@ name: Tests Coverage
 on:
   pull_request:
     branches:
-      - master
+      - main
     paths-ignore:
       - '**/README.md'
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - '**/README.md'
 
@@ -21,8 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
-        # Only cancel non-master branch runs
-        if: ${{ github.ref != 'refs/heads/master' }}
+        if: ${{ github.ref != 'refs/heads/main' }}
         uses: styfle/cancel-workflow-action@0.9.0
         with:
           access_token: ${{ github.token }}
