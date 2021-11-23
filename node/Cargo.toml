@@ -24,6 +24,7 @@ structopt = '0.3.8'
 
 # local dependencies
 zerodao = { path = '../runtime', version = '0.0.1' }
+
 # Substrate dependencies
 frame-benchmarking = '3.1.0'
 frame-benchmarking-cli = '3.0.0'
